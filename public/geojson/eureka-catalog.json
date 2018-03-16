@@ -1,0 +1,228 @@
+{
+  "notoriousMonsters": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            13.9,
+            21.9
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Sabotender Corrido</b><br>Spawn: Kill Flowering Sabotenders<br>Level: 1"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            29.7,
+            27.1
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Lord of the Anemos</b><br>Spawn: Kill Sea Bishop<br>Level: 2"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            25.6,
+            27.4
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Teles</b><br>Spawn: Kill Anemos Harpeia<br>Level: 3"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.2,
+            22.2
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>The Emperor of Anemos</b><br>Spawn: Kill Darners<br>Level: 4"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            25.5,
+            22.3
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Callisto</b><br>Spawn: Kill Val Bears<br>Level: 5"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            23.5,
+            22.7
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Number</b><br>Spawn: Kill Pneumaflayers<br>Level: 6"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            17.7,
+            18.6
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Jahannam</b><br>Spawn: Kill Typhoon Sprites<br>Level: 7"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            15,
+            15.6
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Amemet</b><br>Spawn: Kill Abraxas<br>Level: 8"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            13.8,
+            12.5
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Caym</b><br>Spawn: Kill Stalker Ziz<br>Level: 9"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            28.3,
+            20.4
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Bombadeel</b><br>Spawn: Kill Traveling Gourmands<br>Level: 10"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            24.8,
+            17.9
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Serket</b><br>Spawn: Kill Khor Claws<br>Level: 11"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            21.9,
+            15.6
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Judgemental Julika</b><br>Spawn: Kill Henbanes<br>Level: 12"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            20.3,
+            13.0
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>The White Rider</b><br>Spawn: Kill Duskfall Dullahans<br>Level: 13"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            26.4,
+            14.3
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Polyphemus</b><br>Spawn: Kill Monoeyes<br>Level: 14"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            28.6,
+            13.0
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Simurgh's Strider</b><br>Spawn: Kill Old World Zu<br>Level: 15"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            35.3,
+            18.3
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>King Hazmat</b><br>Spawn: Kill Anemos Analas<br>Level: 16"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            35.5,
+            21.5
+          ]
+        },
+        "properties": {
+          "popupContent": "<b>Fafnir</b><br>Spawn: Kill Fossil Dragons<br>Level: 17"
+        }
+      }
+      ]
+  }
+}

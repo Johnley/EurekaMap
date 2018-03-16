@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eureka Map</title>
+    <link rel="stylesheet" href="js/leaflet.css">
+    <script src="js/leaflet-src.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/4.11.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/4.11.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/4.11.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <style media="screen">
+        #mapid {
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+<div id="mapid"></div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var storageRef = firebase.storage().ref();
+        var mymap = L.map('mapid', {
+            center: [20, 20],
+            zoom: 5,
+            crs: L.CRS.Simple
+        });
+        storageRef.child('images/no_labels_4k.png').getDownloadURL().then(function (url) {
+            var imageBounds = [[6, 0.92], [42.0, 42.0]];
+            var noLabels = L.imageOverlay(url, imageBounds);
+            noLabels.addTo(mymap);
+            mymap.setMaxBounds(imageBounds);
+        }).catch(function (error) {
+            console.log(error);
+        });
+
+        var controlLayers = L.control.layers().addTo(mymap);
+
+        firebase.database().ref('/notoriousMonsters').once('value').then(function (snapshot) {
+            var geojsonLayer = L.geoJSON(snapshot.val().features,
+                {
+                    onEachFeature: function (feature, layer) {
+                        layer.bindPopup(feature.properties.popupContent);
+                        var fateIcon = new L.Icon({
+                            iconSize: [27, 27],
+                            iconAnchor: [13, 27],
+                            popupAnchor: [1, -24],
+                            iconUrl: 'https://firebasestorage.googleapis.com/v0/b/eureka-anemos-map.appspot.com/o/images%2Fboss-fate.png?alt=media&token=0c401922-f8de-473f-957c-f2958f51d1bd'
+                        });
+                        layer.setIcon(fateIcon);
+                    },
+                    coordsToLatLng: function (coords) {
+                        var x = 42 - coords[1];
+                        return [x, coords[0]]
+                    },
+                    style: {
+                        "color": "#000000"
+                    }
+                }).addTo(mymap);
+
+            controlLayers.addOverlay(geojsonLayer, "Notorious Monsters")
+        });
+        L.control.attribution({prefix: false}).addAttribution("Data from <a href='https://www.reddit.com/r/ffxiv/comments/84964v/eureka_map_mob_elements_levels_and_locations/'>Maestar</a>").addTo(mymap)
+
+        //Notorious Monster Spawns
+
+        /*var popup = L.popup();
+
+        function onMapClick(e) {
+            popup
+                .setLatLng(e.latlng)
+                .setContent("You clicked the map at " + e.latlng.toString())
+                .openOn(mymap);
+        }
+
+        mymap.on('click', onMapClick);*/
+    });
+</script>
+</body>
+</html>
